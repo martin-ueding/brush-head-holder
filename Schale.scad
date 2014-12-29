@@ -7,11 +7,23 @@ height = 0.5;
 
 $fn = 30;
 
+module pillar(origin) {
+
+    translate(origin) {
+        cylinder(h=2.5, r=.2);
+
+        translate([0,0,.5]) difference() {
+            translate([0,0,-.5]) cylinder(h=.5, r=.7);
+            rotate_extrude() translate([.7, 0, 0]) circle(r = .5); 
+        }
+    }
+}
+
 translate([0,0,0.5]) {
-    translate([2,2,0]) cylinder(h=2.5, r=.2);
-    translate([5,2,0]) cylinder(h=2.5, r=.2);
-    translate([8,2,0]) cylinder(h=2.5, r=.2);
-    translate([11,2,0]) cylinder(h=2.5, r=.2);
+    pillar([2,2,0]);
+    pillar([5,2,0]);
+    pillar([8,2,0]);
+    pillar([11,2,0]);
 
     difference() {
         cube([13,4,.5]);
