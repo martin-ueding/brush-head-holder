@@ -10,7 +10,7 @@ $fn = 100;
 module pillar(origin) {
 
     translate(origin) {
-        cylinder(h=2.5, r=.2);
+        cylinder(h=3, r=.2);
 
         translate([0,0,.5]) difference() {
             translate([0,0,-.5]) cylinder(h=.5, r=.7);
