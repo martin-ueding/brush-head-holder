@@ -5,7 +5,7 @@ cube([13,4,0.5]);
 
 height = 0.5;
 
-$fn = 30;
+$fn = 100;
 
 module pillar(origin) {
 
