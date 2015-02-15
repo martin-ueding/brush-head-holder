@@ -1,9 +1,9 @@
-// Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+// Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
+
+height = 0.3;
 
 // Ground plate.
-cube([13,4,0.5]);
-
-height = 0.5;
+cube([13,4,height]);
 
 $fn = 100;
 
@@ -19,7 +19,7 @@ module pillar(origin) {
     }
 }
 
-translate([0,0,0.5]) {
+translate([0,0,height]) {
     pillar([2,2,0]);
     pillar([5,2,0]);
     pillar([8,2,0]);
@@ -41,3 +41,5 @@ translate([0,0,0.5]) {
         translate([12,3,.5]) sphere(r=.5);
     }
 }
+
+// vim: cindent
